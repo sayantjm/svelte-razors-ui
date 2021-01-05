@@ -9,14 +9,15 @@
 
 	// router
 	import {Router, Route, Link} from 'svelte-routing';
+
+	// components
+	import NavBar from './components/NavBar/NavBar.svelte';
+	import SideBar from './components/NavBar/SideBar.svelte';
 </script>
 
 <Router>
-	<nav class="navbar">
-		<Link to="/">Home</Link>
-		<Link to="/about">About</Link>
-		<Link to="/products">Products</Link>
-	</nav>
+	<NavBar />
+	<SideBar />
 	<Route path="/" component={Home} />
 	<Route path="/about" component={About} />
 	<Route path="/login" component={Login} />
