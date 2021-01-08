@@ -1,13 +1,20 @@
 <script>
     import links from '../../constants/links'
     import {link} from 'svelte-routing';
+
+    // global store
+    import globalStore from '../../stores/globalStore';
+    import {fly,fade} from 'svelte/transition';
+
 </script>
 
-<div class="sidebar-container">
-    <div class="sidebar">
+<div class="sidebar-container" transition:fly={{x:-1000}}>
+    <div class="sidebar" transition:fade={{delat:400}}>
         <!-- header -->
         <div class="sidebar-header">
-            <button class="btn-close">
+            <button class="btn-close" on:click="{() => {
+                globalStore.toggleItem('sidebar', false);
+            }}">
                 <i class="fas fa-window-close"/>
             </button>
         </div>
@@ -20,7 +27,7 @@
                     <a href={sideLink.url} 
                         use:link
                         on:click="{() => {
-                            console.log('sidebar closed');
+                            globalStore.toggleItem('sidebar', false);
                         }}">{sideLink.text}</a>
                 </li>            
             {/each}
