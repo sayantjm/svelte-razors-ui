@@ -1,1 +1,1 @@
-<h1>Welcome to products page</h1>
+<h1>Welcome to the login page</h1>
