@@ -22,8 +22,10 @@ async function setProducts () {
 // flatten products
 function flattenProducts(data) {
     return data.map(item => {
-        //let image = item.image.url; //Use this one for images in local
-        let image = `${url}${item.image.url}`;
+        //Use this one for images in cloudera
+        let image = item.image.url; 
+        //Use this one for images in local
+        //let image = `${url}${item.image.url}`;
         return {...item, image}
     })
 }
