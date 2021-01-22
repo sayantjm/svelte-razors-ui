@@ -1,3 +1,16 @@
+# Svelte front end application for a Razor shop
+
+It was created as a result of the Udemy course: https://www.udemy.com/course/svelte-tutorial-and-projects-course/
+
+The Front End UI has been deployed into Netlify 
+https://www.netlify.com/
+and it accessible in: https://sayant-svelte-razors-ui.netlify.app/
+
+The Back End has been created with Strapi and deployed in Heroku.
+
+---
+---
+
 *Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
 ---
